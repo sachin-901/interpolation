@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2D Interpolation Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <h1>2D Interpolation Calculator</h1>
+      <p class="subtitle">Performs bilinear interpolation for (x, y)</p>
+
+      <form id="interp2DForm">
+        <div class="grid-container">
+          <div class="grid-header"></div>
+          <div class="grid-header">Y₁</div>
+          <div class="grid-header">Y₂</div>
+          <div class="grid-header">Result</div>
+
+          <div class="grid-label">X₁</div>
+          <input type="number" step="any" id="f_x1y1" placeholder="f(x₁,y₁)" required />
+          <input type="number" step="any" id="f_x1y2" placeholder="f(x₁,y₂)" required />
+          <input type="text" id="res1" readonly placeholder="First result" />
+
+          <div class="grid-label">X₂</div>
+          <input type="number" step="any" id="f_x2y1" placeholder="f(x₂,y₁)" required />
+          <input type="number" step="any" id="f_x2y2" placeholder="f(x₂,y₂)" required />
+          <input type="text" id="res2" readonly placeholder="Second result" />
+
+          <div class="grid-label">Final Result</div>
+          <div></div>
+          <div></div>
+          <input type="text" id="finalRes" readonly placeholder="Final Result" />
+        </div>
+
+        <div class="inputs">
+          <label>X₁: <input type="number" step="any" id="x1" required /></label>
+          <label>X₂: <input type="number" step="any" id="x2" required /></label>
+          <label>Y₁: <input type="number" step="any" id="y1" required /></label>
+          <label>Y₂: <input type="number" step="any" id="y2" required /></label>
+          <label>X: <input type="number" step="any" id="x" required /></label>
+          <label>Y: <input type="number" step="any" id="y" required /></label>
+        </div>
+
+        <button type="submit" class="btn">Calculate</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>Designed by Sachin Kumar • Medical Physics Tools</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
